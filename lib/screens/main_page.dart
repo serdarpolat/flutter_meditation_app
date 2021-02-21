@@ -16,8 +16,9 @@ class _MainState extends State<Main> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: white,
-      body: Consumer2<PagesState, SeeAllType>(builder: (BuildContext context,
-          PagesState pageState, SeeAllType typeState, Widget child) {
+      body: Consumer3<PagesState, SeeAllType, OpenPlaying>(builder:
+          (BuildContext context, PagesState pageState, SeeAllType typeState,
+              OpenPlaying playingState, Widget child) {
         return Container(
           width: s.width,
           height: s.height,
@@ -62,6 +63,15 @@ class _MainState extends State<Main> {
                     ),
                   );
                 }),
+              ),
+              AnimatedPositioned(
+                child: Playing(),
+                top: playingState.minimizePlaying
+                    ? s.height - hh(144)
+                    : playingState.openPlaying
+                        ? 0
+                        : s.height,
+                duration: Duration(milliseconds: 120),
               ),
             ],
           ),

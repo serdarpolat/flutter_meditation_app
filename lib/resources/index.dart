@@ -7,7 +7,8 @@ export 'package:meditaion_app/screens/main_page.dart';
 export 'package:meditaion_app/screens/home/home.dart';
 export 'package:meditaion_app/screens/home/see_all.dart';
 
-export 'package:meditaion_app/screens/lessons/lessons.dart';
+export 'package:meditaion_app/screens/practices/practices.dart';
+export 'package:meditaion_app/screens/practices/playing.dart';
 
 export 'package:meditaion_app/screens/meditation/meditation.dart';
 

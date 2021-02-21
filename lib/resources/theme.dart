@@ -7,7 +7,7 @@ Color blue = Color(0xFF2D73D5);
 Color teal = Color(0xFF44AFE3);
 Color orange = Color(0xFFFEA171);
 Color blueText = Color(0xFF4A80F0);
-Color gray = Colors.black.withAlpha(12);
+Color gray = Color(0xFFD0D0D0);
 Color lightGray = Color(0xFFBBC1C8);
 
 double hh(double size) => (size * 960) / 812;
@@ -22,6 +22,12 @@ TextStyle light15({Color color}) => TextStyle(
 TextStyle reg24({Color color}) => TextStyle(
       color: color,
       fontSize: hh(24),
+      fontWeight: FontWeight.w400,
+    );
+
+TextStyle reg12({Color color}) => TextStyle(
+      color: color,
+      fontSize: hh(12),
       fontWeight: FontWeight.w400,
     );
 

@@ -28,3 +28,20 @@ class SeeAllType with ChangeNotifier {
     notifyListeners();
   }
 }
+
+class OpenPlaying with ChangeNotifier {
+  bool _openPlaying = false;
+  bool _minimizePlaying = false;
+  bool get openPlaying => _openPlaying;
+  bool get minimizePlaying => _minimizePlaying;
+
+  changePlayingState() {
+    _openPlaying = !_openPlaying;
+    notifyListeners();
+  }
+
+  changeMinimizeState() {
+    _minimizePlaying = !_minimizePlaying;
+    notifyListeners();
+  }
+}

@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => PagesState()),
         ChangeNotifierProvider(create: (_) => SeeAllType()),
+        ChangeNotifierProvider(create: (_) => OpenPlaying()),
       ],
       child: MaterialApp(
         title: 'Meditation',
