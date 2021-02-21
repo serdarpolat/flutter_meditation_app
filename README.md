@@ -1,6 +1,6 @@
 # Screens
 
-<img src="screens/scr1.jpg" width="320" /> <img src="screens/scr2.jpg" width="320" /> <img src="screens/scr3.jpg" width="320" />
+<img src="screens/scr1.jpg" width="420" /> <img src="screens/scr2.jpg" width="420" /> <img src="screens/scr3.jpg" width="420" />
 
 A new Flutter project.
 
