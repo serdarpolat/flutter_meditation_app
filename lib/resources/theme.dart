@@ -19,6 +19,12 @@ TextStyle light15({Color color}) => TextStyle(
       fontWeight: FontWeight.w300,
     );
 
+TextStyle light28({Color color}) => TextStyle(
+      color: color,
+      fontSize: hh(28),
+      fontWeight: FontWeight.w300,
+    );
+
 TextStyle reg24({Color color}) => TextStyle(
       color: color,
       fontSize: hh(24),
@@ -41,6 +47,12 @@ TextStyle reg17({Color color}) => TextStyle(
       color: color,
       fontSize: hh(17),
       fontWeight: FontWeight.w400,
+    );
+
+TextStyle med12({Color color}) => TextStyle(
+      color: color,
+      fontSize: hh(12),
+      fontWeight: FontWeight.w500,
     );
 
 TextStyle med16({Color color}) => TextStyle(

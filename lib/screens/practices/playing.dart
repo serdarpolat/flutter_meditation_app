@@ -3,17 +3,26 @@ import 'package:meditaion_app/resources/index.dart';
 import 'package:provider/provider.dart';
 
 class Playing extends StatelessWidget {
+  final Function playing;
+  final double topMargin;
+  final double fontSize;
+  final double iconPos;
+
+  const Playing(
+      {Key key, this.playing, this.topMargin, this.fontSize, this.iconPos})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     Size s = MediaQuery.of(context).size;
     return Consumer<OpenPlaying>(builder: (context, state, child) {
-      return Container(
+      return AnimatedContainer(
+        duration: Duration(milliseconds: 320),
         width: s.width,
         height: s.height,
         child: Stack(
           children: [
             Positioned(
-              top: 36,
+              top: iconPos,
               right: ww(1),
               child: IconButton(
                   icon: Icon(Icons.close),
@@ -25,18 +34,19 @@ class Playing extends StatelessWidget {
             ),
             Column(
               children: [
-                SizedBox(height: hh(44)),
+                SizedBox(height: topMargin),
                 Text(
                   "Mental Training",
-                  style: med24(color: white),
+                  style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.w500,
+                    color: white,
+                  ),
                 ),
                 IconButton(
                   icon: Icon(Icons.expand_more_rounded),
                   color: white,
-                  onPressed: () {
-                    state.changeMinimizeState();
-                    print("object");
-                  },
+                  onPressed: playing,
                 ),
                 SizedBox(height: hh(44)),
                 Container(
